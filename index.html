@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FontAwesom framework-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!-- Bootstrap framework-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- main style in css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Alegreya+Sans&family=Alegreya:ital@0;1&family=Amatic+SC&family=Inter&family=Pacifico&display=swap" rel="stylesheet">
+
+    <title>Bookmark</title>
+  </head>
+  <body>
+    <div class="main py-4">
+      <div class="container">
+        <div class="header1 text-center">
+          <h1 class="text-center my-5 position-relative">Bookmarker</h1>
+        </div>
+        <div class="containerBook">
+          <h2 class="text-center text-success mt-3">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+
+          <div class="my-3">
+            <label for="websiteNameInput"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+            <input oninput="validationName()" type="text" id="websiteNameInput" class="form-control" placeholder="Website Name"/>
+            <div id="showMessage" class="alert alert-danger d-none">contain start char is capitalize</div>
+
+          </div>
+          <div class="my-3">
+            <label for="websiteUrlInput"><i class="fa-solid fa-link pe-2"></i>Site Url</label>
+            <input oninput="validationUrl()" type="text" id="websiteUrlInput" class="form-control" placeholder="Website Url"/>
+            <div id="showMessageUrl" class="alert alert-danger d-none">start website format ex(www.facebook.com)</div>
+          </div>
+          <div class="text-center mb-4">
+            <button
+              class="bttn btn text-white"
+              id="btnSubmit"
+              onclick="addWebsite()">
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <table class="table mt-4 text-center">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="Tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
